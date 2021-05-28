@@ -9,7 +9,7 @@ import org.springframework.web.server.ResponseStatusException;
 import java.util.concurrent.atomic.AtomicLong;
 
 @RestController
-public class luggageControler {
+public class LuggageControler {
 
 
     @GetMapping("/luggage")
