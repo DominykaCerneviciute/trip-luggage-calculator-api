@@ -9,7 +9,7 @@ import org.springframework.web.server.ResponseStatusException;
 import java.util.concurrent.atomic.AtomicLong;
 
 @RestController
-public class LuggageControler {
+public class LuggageController {
 
 
     @GetMapping("/luggage")
@@ -48,15 +48,7 @@ public class LuggageControler {
                     HttpStatus.BAD_REQUEST, "Invalid amount of kilometers", null);
         }
 
-        Request request = new Request();
-        request.setKilometers(kilometers);
-        request.setDays(days);
-        request.setSleepingIndoors(sleepingIndoors);
-        request.setNightsIndoors(nightsIndoors);
-        request.setInWinter(inWinter);
-        request.setInSummer(inSummer);
-        request.setInAutumn(inAutumn);
-        request.setInSpring(inSpring);
+        Request request = new Request(kilometers, days, sleepingIndoors, nightsIndoors, inWinter, inSummer, inAutumn, inSpring);
 
         return Processor.ProcessRequest(request);
     }
