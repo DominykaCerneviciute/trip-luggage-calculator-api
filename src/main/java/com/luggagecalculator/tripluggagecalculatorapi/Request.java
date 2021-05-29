@@ -11,7 +11,7 @@ public class Request {
     private final boolean inSpring; //whether the trip will take place in the spring
     private final int totalNights; //how many nights the trip will take
 
-    public Request(int kilometers, int days, boolean sleepingIndoors, int nightsIndoors, boolean inWinter, boolean inSummer, boolean inAutumn, boolean inSpring) {
+    public Request(int kilometers, int days, int nightsIndoors, boolean inWinter, boolean inSummer, boolean inAutumn, boolean inSpring) {
         this.inWinter = inWinter;
         this.inSummer = inSummer;
         this.inSpring = inSpring;
@@ -19,7 +19,12 @@ public class Request {
         this.days = days;
         this.kilometers = kilometers;
         this.nightsIndoors = nightsIndoors;
-        this.sleepingIndoors = sleepingIndoors;
+        if (nightsIndoors > 0){
+            this.sleepingIndoors = true;
+        }else {
+            this.sleepingIndoors = false;
+        }
+
         this.totalNights = --days;
     }
 

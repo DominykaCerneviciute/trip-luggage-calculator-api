@@ -15,7 +15,6 @@ public class LuggageController {
     @GetMapping("/luggage")
     public LuggageResponse Sample(@RequestParam int kilometers,
                             @RequestParam int days,
-                            @RequestParam boolean sleepingIndoors,
                             @RequestParam int nightsIndoors,
                             @RequestParam boolean inWinter,
                             @RequestParam boolean inSummer,
@@ -48,7 +47,7 @@ public class LuggageController {
                     HttpStatus.BAD_REQUEST, "Invalid amount of kilometers", null);
         }
 
-        Request request = new Request(kilometers, days, sleepingIndoors, nightsIndoors, inWinter, inSummer, inAutumn, inSpring);
+        Request request = new Request(kilometers, days, nightsIndoors, inWinter, inSummer, inAutumn, inSpring);
 
         return Processor.ProcessRequest(request);
     }
