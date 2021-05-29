@@ -1,15 +1,15 @@
 package com.luggagecalculator.tripluggagecalculatorapi;
 
 public class Request {
-    private int kilometers; //trip distance
-    private int days; //how many days the trip will take
-    private boolean sleepingIndoors; //whether it is planned to sleep indoors
-    private int nightsIndoors; //how many nights are planned to sleep indoors
-    private boolean inWinter; //whether the trip will take place in the winter
-    private boolean inSummer; //whether the trip will take place in the summer
-    private boolean inAutumn; //whether the trip will take place in the autumn
-    private boolean inSpring; //whether the trip will take place in the spring
-    private int totalNights; //how many nights the trip will take
+    private final int kilometers; //trip distance
+    private final int days; //how many days the trip will take
+    private final boolean sleepingIndoors; //whether it is planned to sleep indoors
+    private final int nightsIndoors; //how many nights are planned to sleep indoors
+    private final boolean inWinter; //whether the trip will take place in the winter
+    private final boolean inSummer; //whether the trip will take place in the summer
+    private final boolean inAutumn; //whether the trip will take place in the autumn
+    private final boolean inSpring; //whether the trip will take place in the spring
+    private final int totalNights; //how many nights the trip will take
 
     public Request(int kilometers, int days, boolean sleepingIndoors, int nightsIndoors, boolean inWinter, boolean inSummer, boolean inAutumn, boolean inSpring) {
         this.inWinter = inWinter;
